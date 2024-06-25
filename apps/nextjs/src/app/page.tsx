@@ -2,9 +2,11 @@ import Link from "next/link";
 
 import { CreatePost } from "@/app/_components/create-post";
 import { api } from "@/trpc/server";
+import Test from "./_components/test";
 
 export default async function Home() {
   const hello = await api.post.hello({ text: "from tRPC" });
+  const test = await api.test.test();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
@@ -17,7 +19,8 @@ export default async function Home() {
             {hello ? hello.greeting : "Loading tRPC query..."}
           </p>
         </div>
-
+        {test}
+        <Test />
         <CrudShowcase />
       </div>
     </main>
