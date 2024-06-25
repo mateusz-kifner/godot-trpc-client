@@ -1,6 +1,8 @@
 extends Control
 
 
+@onready
+var TRPCErrorDialogScene = preload("res://TRPCErrorDialog.tscn") 
 
 func _on_test_pressed():
 	var http = HTTPRequest.new()
@@ -17,6 +19,13 @@ func _http_request_completed(result: int, response_code: int, headers: PackedStr
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
-	print(response[0]["error"]["json"]["data"]["stack"])
-	$MarginContainer/VBoxContainer/RichTextLabel.append_text(response[0]["error"]["json"]["data"]["stack"])
+	if response[0].has("error"):
+		api._error_stack.append({
+			"error": "Error " + str(response[0]["error"]["json"]["data"]["httpStatus"]) + " : " + response[0]["error"]["json"]["data"]["code"] + "\n" + response[0]["error"]["json"]["message"],
+			"stack": response[0]["error"]["json"]["data"]["stack"]
+		})
+		api._error_stack_length_chnaged.emit(len(api._error_stack)-1)
+
+	#print(response[0]["error"]["json"])
+	#$MarginContainer/VBoxContainer/RichTextLabel.append_text(response[0]["error"]["json"]["data"]["stack"])
 	#print(result,response_code,headers,response)

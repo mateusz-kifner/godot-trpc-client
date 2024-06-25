@@ -7,3 +7,10 @@ var test = _internal_test_0.new()
 var test2 = "test"
 func test3():
 	print("test3 api_root")
+
+
+var _error_stack = []
+
+
+signal _error_stack_length_chnaged(val:int)
+

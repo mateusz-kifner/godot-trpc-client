@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccnyvmumjkve4"]
+[gd_scene load_steps=4 format=3 uid="uid://ccnyvmumjkve4"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_jmlsl"]
 [ext_resource type="Script" path="res://Label.gd" id="2_axixg"]
+[ext_resource type="PackedScene" uid="uid://3pk21igdb5hv" path="res://TRPCErrorDialog.tscn" id="3_kmel8"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,5 +40,8 @@ fit_content = true
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "test"
+
+[node name="TRPCErrorDialog" parent="." instance=ExtResource("3_kmel8")]
+layout_mode = 1
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_test_pressed"]
