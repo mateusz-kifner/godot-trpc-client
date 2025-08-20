@@ -17,11 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-api="*res://trpc.gd"
+api="res://trpc.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/trpc_plugin/plugin.cfg")
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
 [rendering]
 

@@ -4,6 +4,7 @@ import { db } from "@/server/db";
 // import type { MetadataType } from "@/server/db/types";
 import { users } from "./schema";
 import type { UpdatedUser, User } from "./validator";
+import z from "zod";
 
 // compile query ahead of time
 const userPrepareGetById = db.query.users
