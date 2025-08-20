@@ -1,0 +1,40 @@
+{
+  "cSpell.words": [
+    "biomejs",
+    "byethrow",
+    "cmdk",
+    "configurator",
+    "embla",
+    "hookform",
+    "nextjs",
+    "policarbonate",
+    "praha",
+    "sonner",
+    "superjson",
+    "tabler",
+    "tanstack",
+    "tinycolor",
+    "vaul"
+  ],
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@radix-ui/*",
+    "drizzle-orm/sqlite-core/*",
+    "drizzle-orm/mysql-core/*",
+    "drizzle-orm/singlestore-core/*",
+    "drizzle-orm/gel-core/*",
+    "react-day-picker/button",
+    "next/router"
+  ],
+  "javascript.suggest.classMemberSnippets.enabled": false,
+  "typescript.suggest.classMemberSnippets.enabled": false,
+  "typescript.suggest.objectLiteralMethodSnippets.enabled": false,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva([^;]*);", "'([^']*)'"],
+    ["cva([^;]*);", "\"([^\"]*)\""],
+    ["cva([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+  "editor.codeActionsOnSave": {
+    "source.organizeImports.biome": "explicit"
+  },
+  "editor.defaultFormatter": "biomejs.biome"
+}

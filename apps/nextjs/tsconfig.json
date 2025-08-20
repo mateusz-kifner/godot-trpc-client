@@ -8,6 +8,7 @@
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
+    "verbatimModuleSyntax": true,
 
     /* Strictness */
     "strict": true,
@@ -30,13 +31,12 @@
     }
   },
   "include": [
-    ".eslintrc.cjs",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts"
-  ],
+, "scripts/watch.mjs"  ],
   "exclude": ["node_modules"]
 }

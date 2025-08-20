@@ -12,12 +12,16 @@ config_version=5
 
 config/name="godot-trpc-client"
 run/main_scene="res://Main.tscn"
-config/features=PackedStringArray("4.2", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 api="*res://trpc.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/trpc_plugin/plugin.cfg")
 
 [rendering]
 

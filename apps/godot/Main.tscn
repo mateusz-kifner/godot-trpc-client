@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ccnyvmumjkve4"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_jmlsl"]
-[ext_resource type="Script" path="res://Label.gd" id="2_axixg"]
+[ext_resource type="Script" uid="uid://dlaw4tenwua2g" path="res://Main.gd" id="1_jmlsl"]
+[ext_resource type="Script" uid="uid://d18nj1b16r4ea" path="res://Label.gd" id="2_axixg"]
 [ext_resource type="PackedScene" uid="uid://3pk21igdb5hv" path="res://TRPCErrorDialog.tscn" id="3_kmel8"]
 
 [node name="Control" type="Control"]

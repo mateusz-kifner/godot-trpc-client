@@ -4,27 +4,24 @@
   "description": "",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean",
-    "db:push": "pnpm -F db push",
-    "db:studio": "pnpm -F db studio",
-    "dev": "turbo dev --parallel",
-    "format:mock": "turbo format --continue --",
-    "format": "turbo format --continue -- --write",
-    "lint": "turbo lint --continue --",
-    "lint:fix": "turbo lint --continue -- --apply",
-    "lint:fix-unsafe": "turbo lint --continue -- --apply-unsafe",
-    "lint:ws": "pnpm dlx sherif@latest",
-    "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo typecheck"
+    "build": "pnpm -F nextjs build",
+    "check": "pnpm -F nextjs check",
+    "check:unsafe": "pnpm -F nextjs check:unsafe",
+    "check:write": "pnpm -F nextjs check:write",
+    "db:generate": "pnpm -F nextjs db:generate",
+    "db:migrate": "pnpm -F nextjs db:migrate",
+    "db:push": "pnpm -F nextjs db:push",
+    "db:studio": "pnpm -F nextjs db:studio",
+    "dev": "pnpm -F nextjs dev",
+    "preview": "pnpm -F nextjs preview",
+    "start": "pnpm -F nextjs start",
+    "typecheck": "pnpm -F nextjs typecheck"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "turbo": "^2.0.5",
     "biome": "^0.3.3"
   },
-  "packageManager": "pnpm@9.3.0+sha512.ee7b93e0c2bd11409c6424f92b866f31d3ea1bef5fbe47d3c7500cdc3c9668833d2e55681ad66df5b640c61fa9dc25d546efa54d76d7f8bf54b13614ac293631"
+  "packageManager": "pnpm@10.14.0"
 }

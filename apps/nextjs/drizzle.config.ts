@@ -1,4 +1,4 @@
-import { type Config } from "drizzle-kit";
+import type { Config } from "drizzle-kit";
 
 import { env } from "@/env";
 
@@ -8,5 +8,5 @@ export default {
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-  tablesFilter: ["godot-trpc-client_*"],
+  tablesFilter: ["acme_*"],
 } satisfies Config;

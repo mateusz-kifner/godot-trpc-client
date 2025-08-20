@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://3pk21igdb5hv"]
 
-[ext_resource type="Script" path="res://Window.gd" id="1_11sgr"]
-[ext_resource type="Script" path="res://TRPCErrorDialog.gd" id="1_e3op7"]
+[ext_resource type="Script" uid="uid://bhri55uv76joh" path="res://Window.gd" id="1_11sgr"]
+[ext_resource type="Script" uid="uid://ce76tama6ekgf" path="res://TRPCErrorDialog.gd" id="1_e3op7"]
 [ext_resource type="Texture2D" uid="uid://fmy2p2okfail" path="res://IconBug.svg" id="2_ixab2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6le3"]
