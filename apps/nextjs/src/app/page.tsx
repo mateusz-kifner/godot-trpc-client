@@ -1,13 +1,15 @@
+"use client"
+import { api } from "@/trpc/react";
 import { RedirectType, redirect } from "next/navigation";
 
-export default async function Home() {
+export default  function Home() {
   // const product = await ResultAsync.fromPromise(api.product.getAll(), (err) =>
   //   console.log(err),
   // );
-
+  const {data} = api.test.hello.useQuery("world");
   // redirect("/conf", RedirectType.push);
 
-  return <div>Test2</div>
+  return <div>{data}</div>
 
   // const session = await auth();
 

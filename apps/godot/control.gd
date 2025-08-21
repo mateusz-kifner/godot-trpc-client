@@ -1,26 +1,8 @@
 @tool
 extends Control
-#const TRPC = preload("res://trpc/trpc.gd")
-
-var UserSchema = Z.schema({
-  "name": Z.string().non_empty().maximum(5),
-  "age": Z.integer().minimum(12),
-  "is_tall": Z.boolean()
-})
-
-# Our data we want to validate
-var user = {
-  "name": "Jason",
-  "age": "dada",
-  "is_tall": true
-}
-
-var  z_tool = Z_tool.new().check(UserSchema,user)
-
 
 func _ready() -> void:
-	pass
-	
-	
-#func _res():
-	#print("hello")
+	var res = await api.test.query("Mateusz")
+	var body_string = res[3].get_string_from_utf8()
+	var json = JSON.parse_string(body_string)
+	print(json)

@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-api="res://trpc.gd"
+api="*res://trpc/trpc.gd"
+TRPCClient="*res://addons/trpc_plugin/TRPCClient.gd"
 
 [editor_plugins]
 
