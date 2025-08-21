@@ -22,7 +22,7 @@ TRPCClient="*res://addons/trpc_plugin/TRPCClient.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+enabled=PackedStringArray("res://addons/HTTPManager/plugin.cfg", "res://addons/godot_query/plugin.cfg", "res://addons/gut/plugin.cfg")
 
 [rendering]
 

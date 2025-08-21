@@ -1,12 +1,12 @@
 "use client"
 import { api } from "@/trpc/react";
-import { RedirectType, redirect } from "next/navigation";
 
 export default  function Home() {
   // const product = await ResultAsync.fromPromise(api.product.getAll(), (err) =>
   //   console.log(err),
   // );
   const {data} = api.test.hello.useQuery("world");
+  const {data:data2} = api.test.test.hello.useQuery();
   // redirect("/conf", RedirectType.push);
 
   return <div>{data}</div>
@@ -23,4 +23,14 @@ export default  function Home() {
   //     </main>
   //   </HydrateClient>
   // );
+}
+
+
+const cache = {
+  "path":{
+    loading: false,
+    config:null,
+    data:{},
+    error:{}
+  }
 }
